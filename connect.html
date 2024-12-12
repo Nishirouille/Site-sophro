@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de connection</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="rdv.html">Rendez-vous</a></li>
+        </ul>
+    </nav>
+    <div class="haut_page">
+        <h1><Strong>Bienvenue sur le site de connection !</Strong></h1>
+    </div>
+    <br>
+    <hr id="barre_menu">
+    <br>
+    <div class="connect">
+        <h3 id="titre_insciption"> Inscrivez-vous !</h3>
+        <div class="id">
+            <label id="titre_insciption" for="identifiant">Identifiant&nbsp;:</label>
+            <input type="text" id="identifiant" name="ident" required>
+        </div>
+        <br>
+        <div class="pw">
+            <label id="titre_insciption" for="password">Mot de passe&nbsp;:</label>
+            <input type="text" id="password" name="passw" required>
+        </div>
+        <br>
+        <br>
+        <div class="s_inscrire">
+            <button class="button_connect" type="submit" onclick="getcoo();">S'inscrire</button>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js"></script>
+            <script>
+                function getcoo() {
+                    var id = document.getElementById("identifiant").value;
+                    var pw = document.getElementById("password").value;
+                    alert("on essaye d'ecrire !")
+                    const blob = new Blob(["couhgthcou"], {type: "text/plain;charset=utf-8"});
+                    saveAs(blob, "C:\Users\loisj\OneDrive\Bureau\site_connect/identifiant.txt");
+                    alert(id +" et "+ pw);
+                }
+            </script>
+        </div>
+        <br>
+        <a href="" >Mot de passe oublié</a>
+    </div>
+</body>
+</html>
